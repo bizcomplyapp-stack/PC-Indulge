@@ -23,6 +23,7 @@ export default function Home() {
         <div className="hero-image" role="img" aria-label="Private chef plating a fine dining meal" />
         <div className="hero-shade" />
         <div className="hero-content">
+          <img className="hero-logo" src="/brand/pc-indulge-logo.png" alt="PC Indulge — Nourish & Taste" />
           <p className="eyebrow">Private chef experiences</p>
           <h1>Your table.<br/><em>Beautifully</em> indulged.</h1>
           <p className="hero-copy">Bespoke dining, prepared with care and served in the comfort of your chosen space.</p>
@@ -34,12 +35,12 @@ export default function Home() {
       <section className="about section" id="about">
         <div className="section-label">01 — Our story</div>
         <div className="about-copy"><p className="script">More than a meal</p><h2>We create moments that <em>linger.</em></h2><p>PC Indulge brings restaurant-quality dining into your home, office or special setting. Led by Chef Sindi Shozi, every experience is considered from the first conversation to the final plate—personal, generous and quietly luxurious.</p><div className="signature">Sindi <span>Chef &amp; Founder</span></div></div>
-        <div className="about-photo"><img src="https://amouretpapilles.fr/images/chief/chief1.webp" alt="Chef carefully plating a gourmet dish"/><div className="photo-caption">Personal menus<br/>Thoughtful service</div></div>
+        <div className="about-photo"><img src="/brand/booking-terms.jpg" alt="PC Indulge private chef booking terms"/><div className="photo-caption">Personal menus<br/>Thoughtful service</div></div>
       </section>
 
       <section className="services section" id="services">
         <div className="section-top"><div><p className="script light">Made for your moment</p><h2>Signature <em>experiences</em></h2></div><p>Choose your occasion. We’ll shape the menu and service around the atmosphere you want to create.</p></div>
-        <div className="service-grid">{services.map((s) => <article className="service-card" key={s.num}><img className="service-art" src={s.image} alt=""/><span className="service-num">{s.num}</span><div><h3>{s.title}</h3><p>{s.text}</p></div><div className="service-price"><strong>{s.price}</strong><small>{s.meta}</small></div><a href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Enquire about ${s.title}`}>↗</a></article>)}</div>
+        <div className="service-slideshow">{services.map((s) => <article className="service-slide" key={s.num}><img src={s.image} alt=""/><div><span>{s.num}</span><h3>{s.title}</h3><p>{s.text}</p><strong>{s.price} <small>{s.meta}</small></strong></div></article>)}</div>
         <div className="service-note"><span>Good to know</span><p>Food is purchased by the client. Transport is charged separately.</p></div>
       </section>
 
